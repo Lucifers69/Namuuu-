@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namuu Looks Amazing! ✨</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #ff9a9e, #fecfef, #fad0c4, #ffd1ff);
+            background-size: 400% 400%;
+            animation: gradientShift 12s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            padding: 50px 30px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            animation: slideUp 1s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .name-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.2em;
+            background: linear-gradient(45deg, #ff6b9d, #ff8e8e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 5px #ff6b9d); }
+            to { filter: drop-shadow(0 0 15px #ff8e8e); }
+        }
+        
+        .subtitle {
+            color: #ff6b9d;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease 0.3s both;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .saree-section {
+            margin: 40px 0;
+        }
+        
+        .saree-emoji {
+            font-size: 4em;
+            display: block;
+            margin-bottom: 20px;
+            animation: sway 3s ease-in-out infinite;
+        }
+        
+        @keyframes sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .admire-text {
+            font-size: 1.3em;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .pic-request {
+            background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border-left: 5px solid #ff6b9d;
+            animation: slideInRight 1s ease 0.6s both;
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .pic-request h3 {
+            color: #ff6b9d;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .pic-request p {
+            color: #888;
+            font-size: 1.1em;
+        }
+        
+        .hearts-bottom {
+            font-size: 2.5em;
+            margin-top: 30px;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        @media (max-width: 600px) {
+            .name-title { font-size: 2.5em; }
+            .container { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="name-title">Namisha</h1>
+        <div class="subtitle">Namuu looks ✨ AMAZING ✨</div>
+        
+        <div class="saree-section">
+            <span class="saree-emoji">🧕‍♀️💃</span>
+            <p class="admire-text">
+                Namuu, you totally rock the saree look! 😊<br>
+                It's such a cool blend of traditional + stylish.<br>
+                You make it look so effortless and cute!
+            </p>
+        </div>
+        
+        <div class="pic-request">
+            <h3>Would love to see! 📸</h3>
+            <p>
+                Got any saree pics? Would be awesome to check out!<br>
+                No pressure though 😄 Share whenever!
+            </p>
+        </div>
+        
+        <p class="admire-text" style="font-weight: 600; color: #ff6b9d;">
+            Saree suits you perfectly, Namuu! 👌✨
+        </p>
+        
+        <div class="hearts-bottom">💕💕💕</div>
+    </div>
+
+    <script>
+        // Floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '💖';
+            heart.style.cssText = `
+                position: fixed;
+                font-size: 1.5em;
+                pointer-events: none;
+                left: ${Math.random() * 100}vw;
+                animation: floatUp 4s linear forwards;
+                z-index: 999;
+            `;
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 5000);
+        }
+        
+        const floatKeyframes = `
+            @keyframes floatUp {
+                to {
+                    transform: translateY(-100vh);
+                    opacity: 0;
+                }
+            }
+        `;
+        const style = document.createElement('style');
+        style.textContent = floatKeyframes;
+        document.head.appendChild(style);
+        
+        setInterval(createHeart, 2000);
+    </script>
+</body>
+</html>
